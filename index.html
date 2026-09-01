@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Una selección curada y filtrable de 49 obras de teatro en Madrid, con fechas, precios, ranking y prioridad." />
+    <meta name="theme-color" content="#7d1f28" />
+    <meta property="og:title" content="Madrid a escena · Cartelera teatral 2026" />
+    <meta property="og:description" content="49 obras para elegir bien, con filtros por teatro, mes, tipo y prioridad." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aronfenix.github.io/madrid-a-escena/" />
+    <meta property="og:image" content="https://aronfenix.github.io/madrid-a-escena/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Madrid a escena · Cartelera teatral 2026</title>
+    <link rel="canonical" href="https://aronfenix.github.io/madrid-a-escena/" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-inner">
+        <div class="edition"><span>Selección 2026</span><span>Madrid · Sep—Ene</span></div>
+        <div class="title-lockup">
+          <span class="eyebrow">✦ Cartelera curada</span>
+          <h1>Madrid<br /><em>a escena</em></h1>
+          <p>49 obras para elegir bien, sin perderse entre cien pestañas.</p>
+        </div>
+        <div class="stats" aria-label="Resumen">
+          <strong id="total-count">49</strong><span>obras</span><strong id="theatre-count">—</strong><span>teatros</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="filter-shell" aria-label="Filtros de cartelera">
+        <label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar obra o teatro…" /></label>
+        <div class="quickbar" aria-label="Filtros rápidos">
+          <div class="quick-filters">
+            <button type="button" data-mode="all" class="active" aria-pressed="true">Toda la cartelera</button>
+            <button type="button" data-mode="essential" aria-pressed="false">Imprescindibles · 5/5</button>
+            <button type="button" data-mode="saved" aria-pressed="false">Mis guardadas · <span id="saved-count">0</span></button>
+          </div>
+          <button id="share" type="button" class="share-button">↗ <span>Compartir</span></button>
+        </div>
+        <div class="filters">
+          <label><span>Teatro</span><select id="theatre"><option value="">Todos</option></select></label>
+          <label><span>Mes</span><select id="month"><option value="">Todos</option><option value="sep">Septiembre</option><option value="oct">Octubre</option><option value="nov">Noviembre</option><option value="dic">Diciembre</option><option value="ene">Enero</option></select></label>
+          <label><span>Tipo</span><select id="type"><option value="">Todos</option></select></label>
+          <label><span>Prioridad</span><select id="priority"><option value="">Todas</option><option value="5">5/5</option><option value="4">4/5</option><option value="3">3/5</option><option value="2">2/5</option></select></label>
+          <label><span>Ordenar</span><select id="sort"><option value="date">Por fecha</option><option value="rank">Por ranking</option></select></label>
+        </div>
+      </section>
+
+      <section class="list-shell">
+        <div class="list-heading"><p><strong id="result-count">49</strong> <span id="result-label">obras encontradas</span></p><button id="reset" type="button">↻ Limpiar filtros</button></div>
+        <div id="cards" class="cards" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden><div aria-hidden="true">⇅</div><h2>No hay obras con esos filtros</h2><p>Prueba a quitar alguno para ampliar la búsqueda.</p><button id="empty-reset" type="button">Ver toda la cartelera</button></div>
+      </section>
+    </main>
+
+    <footer><p>Selección editorial cerrada el 31 de agosto de 2026. Precios aproximados.</p><p>49 obras en 47 puestos: las tres partes de Trilogía del absurdo comparten el nº 28.</p></footer>
+  </body>
+</html>

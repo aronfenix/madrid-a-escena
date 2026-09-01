@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aronfenix.github.io/madrid-a-escena/sitemap.xml
